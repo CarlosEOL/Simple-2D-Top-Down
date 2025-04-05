@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 /// <summary>
@@ -18,6 +19,9 @@ namespace IndieMarc.TopDown
 
         private string unique_id;
         private CarryItem carry_item;
+        
+        [field: SerializeField]
+        EventReference unlock_event { get; set; }
 
         void Start()
         {
@@ -41,6 +45,7 @@ namespace IndieMarc.TopDown
             if (door.GetComponent<Door>() && door.GetComponent<Door>().CanKeyUnlock(this) && !door.GetComponent<Door>().IsOpened())
             {
                 door.GetComponent<Door>().UnlockWithKey(key_value);
+                RuntimeManager.PlayOneShot(unlock_event, gameObject.transform.position);
                 Destroy(gameObject);
                 return true;
             }

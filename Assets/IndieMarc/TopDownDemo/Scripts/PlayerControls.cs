@@ -69,7 +69,8 @@ namespace IndieMarc.TopDown
             movementTimer -= Time.deltaTime;
             if (move.magnitude > 0.1f & movementTimer < 1.0f)
             {
-                RuntimeManager.PlayOneShotAttached("event:/Wlak", this.gameObject);
+                movementTimer = 2.0f;
+                RuntimeManager.PlayOneShotAttached("event:/Walk", GameObject.Find("CharacterTopDown"));
             }
             return move;
         }

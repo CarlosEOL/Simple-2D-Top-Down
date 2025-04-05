@@ -43,11 +43,65 @@ MonoBehaviour:
   Path: 2DFMOD/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638792409945377246
+  lastModified: 638794793283670399
   FileSizes:
   - Name: Desktop
-    Value: 603008
+    Value: 603104
   Exists: 1
+--- !u!114 &-5933463309091688277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Unlock
+  m_EditorClassIdentifier: 
+  Path: event:/Unlock
+  Guid:
+    Data1: 1325085973
+    Data2: 1232940105
+    Data3: -134872132
+    Data4: 1228031088
+  Banks:
+  - {fileID: 6885345990418253320}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 656
+--- !u!114 &-5213291587903199771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WaterDripping
+  m_EditorClassIdentifier: 
+  Path: event:/WaterDripping
+  Guid:
+    Data1: -1888192318
+    Data2: 1292590922
+    Data3: 249651128
+    Data4: -1500277691
+  Banks:
+  - {fileID: 6885345990418253320}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &-5161120992456957548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,11 +117,38 @@ MonoBehaviour:
   Path: 2DFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638794710840005648
+  lastModified: 638794778146218332
   FileSizes:
   - Name: Desktop
-    Value: 1700
+    Value: 1832
   Exists: 1
+--- !u!114 &-3755779285107345916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lever
+  m_EditorClassIdentifier: 
+  Path: event:/Lever
+  Guid:
+    Data1: -1453147999
+    Data2: 1096691367
+    Data3: 1511706522
+    Data4: -1873964273
+  Banks:
+  - {fileID: 6885345990418253320}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3224306310523725708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,11 +164,38 @@ MonoBehaviour:
   Path: 2DFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638794710840025697
+  lastModified: 638794778146218332
   FileSizes:
   - Name: Desktop
-    Value: 1048
+    Value: 1294
   Exists: 1
+--- !u!114 &-199693812150882017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance
+  Guid:
+    Data1: -1880618313
+    Data2: 1247492482
+    Data3: -1456786025
+    Data4: 2049987842
+  Banks:
+  - {fileID: 6885345990418253320}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5038
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,13 +216,19 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -6885344913622811410}
   - {fileID: 4036797506318601093}
+  - {fileID: 3893830877135707186}
+  - {fileID: -5213291587903199771}
+  - {fileID: -5933463309091688277}
+  - {fileID: 3468108298004782130}
+  - {fileID: -3755779285107345916}
+  - {fileID: -199693812150882017}
   EditorParameters:
   - {fileID: 1454512144144657663}
   MasterBanks:
   - {fileID: -5161120992456957548}
   StringsBanks:
   - {fileID: -3224306310523725708}
-  cacheTime: 638794710840101014
+  cacheTime: 638794795103995945
   cacheVersion: 131846
 --- !u!114 &1454512144144657663
 MonoBehaviour:
@@ -140,6 +254,60 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &3468108298004782130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Key
+  m_EditorClassIdentifier: 
+  Path: event:/Key
+  Guid:
+    Data1: 1723554881
+    Data2: 1190075695
+    Data3: 1533269182
+    Data4: -722311250
+  Banks:
+  - {fileID: 6885345990418253320}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3893830877135707186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StoneDoorMoves
+  m_EditorClassIdentifier: 
+  Path: event:/StoneDoorMoves
+  Guid:
+    Data1: -2062234241
+    Data2: 1147983510
+    Data3: 1720140203
+    Data4: 145613942
+  Banks:
+  - {fileID: 6885345990418253320}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4036797506318601093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +329,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 6885345990418253320}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -206,8 +374,8 @@ MonoBehaviour:
   Path: 2DFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638794710840101014
+  lastModified: 638794795103995945
   FileSizes:
   - Name: Desktop
-    Value: 1058
+    Value: 223072
   Exists: 1

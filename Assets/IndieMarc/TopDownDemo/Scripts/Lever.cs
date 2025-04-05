@@ -37,7 +37,7 @@ namespace IndieMarc.TopDown
 
         public UnityAction OnTriggerLever;
 
-        private static List<Lever> levers = new List<Lever>();
+        private static List<Lever> levers = new();
 
         private void Awake()
         {
@@ -103,9 +103,6 @@ namespace IndieMarc.TopDown
                 {
                     state = LeverState.left;
                 }
-                
-                //Audio
-                GetComponent<AudioSource>().Play();
 
                 //Trigger
                 if (OnTriggerLever != null)

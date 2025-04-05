@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 
 /// <summary>
 /// Door script
@@ -30,11 +31,6 @@ namespace IndieMarc.TopDown
         [Header("Lever Door")]
         public LeverState lever_state_required;
         public GameObject[] levers;
-
-        [Header("Audio")]
-        public AudioClip audio_door_open;
-        public AudioClip audio_door_close;
-        public AudioClip audio_door_close_hard;
         
         private Vector3 initialPos;
         private int nb_keys_inside;
@@ -42,8 +38,9 @@ namespace IndieMarc.TopDown
         private bool initial_opened;
         private Vector3 target_pos;
         private bool should_open;
-
-        private AudioSource audio_source;
+        
+        [field:SerializeField]
+        private EventReference audio_source;
         
         private List<Lever> lever_list = new List<Lever>();
 
@@ -64,7 +61,6 @@ namespace IndieMarc.TopDown
             initialPos = transform.position;
             initialPos.z = 0f;
             initial_opened = opened_at_start;
-            audio_source = GetComponent<AudioSource>();
             target_pos = transform.position;
             should_open = opened_at_start;
 
@@ -100,6 +96,7 @@ namespace IndieMarc.TopDown
 
             //Open door
             bool activated = (nb_switch >= nb_switches_required);
+            
             Vector3 move_dir = GetMoveDir();
             should_open = opened_at_start ? !activated : activated;
             target_pos = transform.position;
@@ -112,11 +109,10 @@ namespace IndieMarc.TopDown
                     target_pos = initialPos + move_dir.normalized * max_move;
                     target_pos.z = 0f;
 
-                    if (audio_source.enabled && !audio_source.isPlaying && audio_last_played != 1)
+                    if (!audio_source.IsNull && audio_last_played != 1)
                     {
                         audio_last_played = 1;
-                        audio_source.clip = audio_door_open;
-                        audio_source.Play();
+                        RuntimeManager.PlayOneShotAttached(audio_source, gameObject);
                     }
                 }
             }
@@ -130,11 +126,10 @@ namespace IndieMarc.TopDown
                     target_pos = initialPos;
                     target_pos.z = 0f;
 
-                    if (audio_source.enabled && !audio_source.isPlaying && audio_last_played != 2)
+                    if (audio_source.IsNull && audio_last_played != 2)
                     {
                         audio_last_played = 2;
-                        audio_source.clip = close_speed > 5.1f ? audio_door_close_hard : audio_door_close;
-                        audio_source.Play();
+                        RuntimeManager.PlayOneShotAttached(audio_source, gameObject);
                     }
                 }
             }
