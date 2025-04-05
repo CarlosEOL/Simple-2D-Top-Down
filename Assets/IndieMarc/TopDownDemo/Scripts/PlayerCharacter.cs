@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -91,7 +92,6 @@ namespace IndieMarc.TopDown
                 //Controls
                 PlayerControls controls = PlayerControls.Get(player_id);
                 move_input = controls.GetMove();
-                
             }
 
             //Update lookat side

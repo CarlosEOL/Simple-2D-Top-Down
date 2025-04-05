@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{3855613d-f9b7-4234-95ef-5d60fd4a7a7a}">
+		<property name="assetPath">
+			<value>Music/LVL_Exit.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dcbe2f54-bfab-4a97-8d9a-ef518394314f}</destination>
+		</relationship>
+	</object>
+</objects>

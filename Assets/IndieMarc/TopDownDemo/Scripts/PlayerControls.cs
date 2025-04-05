@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 /// <summary>
@@ -24,6 +25,8 @@ namespace IndieMarc.TopDown
         private bool action_hold = false;
 
         private static Dictionary<int, PlayerControls> controls = new Dictionary<int, PlayerControls>();
+
+        private float movementTimer = 2.0f;
 
         void Awake()
         {
@@ -63,6 +66,11 @@ namespace IndieMarc.TopDown
         //------ These functions should be called from the Update function, not FixedUpdate
         public Vector2 GetMove()
         {
+            movementTimer -= Time.deltaTime;
+            if (move.magnitude > 0.1f & movementTimer < 1.0f)
+            {
+                RuntimeManager.PlayOneShotAttached("event:/Wlak", this.gameObject);
+            }
             return move;
         }
 
